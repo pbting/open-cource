@@ -6,7 +6,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
-
 public class ThreadPoolExecutorTests {
 
 	public static void main(String[] args) throws Exception {
