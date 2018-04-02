@@ -22,7 +22,7 @@ public class DisruptorParallelQueueExecutor extends AbstractParallelQueueExecuto
 	
 	private Disruptor<RunnableEvent>[] disruptors;
 	private ThreadPoolExecutorIndexAllocator ringBufferExecutorIndexChooser ;
-	private ConcurrentMap<String, Integer> queueExecutorMapping = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, Integer> queueExecutorMapping = new ConcurrentHashMap<String, Integer>();
 	private ReentrantLock lock = new ReentrantLock(true);
 	private AtomicLongMap<String> topicLastExecuteTime = AtomicLongMap.create();
 	private AtomicBoolean isOperating = new AtomicBoolean(false);
