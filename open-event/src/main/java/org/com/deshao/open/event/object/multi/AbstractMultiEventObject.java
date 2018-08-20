@@ -27,7 +27,7 @@ public abstract class AbstractMultiEventObject<V> extends AbstractFastAsyncEvent
 	@Override
 	public void multiCast(final Deque<IEventObjectListener<V>> eventObjectListeners,final ObjectEvent<V> event) {
 		IParallelQueueExecutor parallelQueueExecutor = getParallelQueueExecutor();
-		for(IEventObjectListener<V> eventObjectListener:eventObjectListeners){
+		for(final IEventObjectListener<V> eventObjectListener:eventObjectListeners){
 			parallelQueueExecutor.executeOneTime(new Runnable() {
 				@Override
 				public void run() {
